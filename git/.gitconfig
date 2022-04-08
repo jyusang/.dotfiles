@@ -1,0 +1,37 @@
+[user]
+  email = jyusang@protonmail.com
+  name = Yusan
+
+[core]
+  editor = vim
+  excludesfile = ~/.gitignore_global
+  ignorecase = false
+
+[init]
+  defaultBranch = main
+
+[alias]
+  hist = log --all --graph --oneline
+  amend = commit --all --amend
+  save = ! git add --all && git commit --message 'SAVEPOINT'
+  undo = reset HEAD~1 --mixed
+  bye-list = \
+    ! git branch --remotes \
+    | grep origin \
+    | grep --invert-match HEAD \
+    | grep --invert-match main \
+    | grep --invert-match master \
+    | sed 's/origin\\///g'
+  bye = \
+    ! git bye-list \
+    | xargs git push --dry-run --delete origin \
+    && echo 'Use `git byebye` to delete them.'
+  byebye = \
+    ! git bye-list \
+    | xargs git push --delete origin
+
+[filter "lfs"]
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
