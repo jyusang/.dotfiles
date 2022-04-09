@@ -41,6 +41,17 @@
   (dired dired-jump)
   :straight t)
 
+(use-package no-littering
+  :config
+  (require 'recentf)
+  (add-to-list 'recentf-exclude no-littering-var-directory)
+  (add-to-list 'recentf-exclude no-littering-etc-directory)
+  (setq auto-save-file-name-transforms
+	`((".*" ,(no-littering-expand-var-file-name "auto-save/") t)))
+  (setq backup-directory-alist
+	`((".*" . ,(no-littering-expand-var-file-name "backup/"))))
+  :straight t)
+
 (use-package doom-themes
   :init
   (setq doom-themes-enable-bold t)

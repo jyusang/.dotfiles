@@ -1,8 +1,6 @@
-.emacs.d/auto-save-list/
 .emacs.d/eln-cache/
 .emacs.d/elpa/
-.emacs.d/eshell/
-.emacs.d/projectile-bookmarks.eld
-.emacs.d/recentf
+.emacs.d/etc/
 .emacs.d/straight/
-.emacs.d/transient/
+.emacs.d/var/
+.emacs.d/recentf
