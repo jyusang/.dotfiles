@@ -21,7 +21,6 @@
 (column-number-mode)
 (global-display-line-numbers-mode t)
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
-(menu-bar-mode -1)
 (scroll-bar-mode -1)
 (set-face-attribute 'default nil :font "Fira Code Light" :height 100)
 (set-fringe-mode 8)
@@ -54,15 +53,6 @@
 	`((".*" ,(no-littering-expand-var-file-name "auto-save/") t)))
   (setq backup-directory-alist
 	`((".*" . ,(no-littering-expand-var-file-name "backup/"))))
-  :straight t)
-
-(use-package doom-themes
-  :init
-  (setq doom-themes-enable-bold t)
-  (setq doom-themes-enable-italic t)
-  :config
-  (load-theme 'doom-solarized-light t)
-  (doom-themes-visual-bell-config)
   :straight t)
 
 (use-package evil
