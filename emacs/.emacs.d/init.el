@@ -163,8 +163,3 @@
   :hook
   (python-mode . (lambda () (require 'lsp-pyright) (lsp-deferred)))
   :straight t)
-
-(add-hook 'emacs-startup-hook
-          (lambda ()
-            (cd default-directory)
-            (eshell)))
