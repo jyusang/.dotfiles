@@ -17,7 +17,7 @@
 ;; standard
 (setq dired-listing-switches "-agho --group-directories-first")
 (setq inhibit-startup-message t)
-(setq visual-bell t)
+(setq visible-bell t)
 (column-number-mode)
 (global-display-line-numbers-mode t)
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
