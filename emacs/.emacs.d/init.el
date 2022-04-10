@@ -105,6 +105,17 @@
 (use-package counsel
   :config
   (counsel-mode 1)
+  :custom
+  (counsel-rg-base-command ;; Modified from the original one to include hidden files
+   `("rg"
+     "--max-columns" "240"
+     "--with-filename"
+     "--no-heading"
+     "--line-number"
+     "--color" "never"
+     "--hidden"
+     "--glob" "!.git/*"
+     "%s"))
   :straight t)
 
 (use-package which-key
