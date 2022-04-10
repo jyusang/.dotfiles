@@ -16,9 +16,6 @@
 
 ;; standard
 (setq dired-listing-switches "-agho --group-directories-first")
-(setq eshell-buffer-maximum-lines 10000
-      eshell-history-size 10000
-      eshell-scroll-to-bottom-on-input t)
 (setq inhibit-startup-message t)
 (setq visual-bell t)
 (column-number-mode)
@@ -30,6 +27,13 @@
 (set-fringe-mode 8)
 (tool-bar-mode -1)
 (tooltip-mode -1)
+
+;; eshell
+(setq eshell-buffer-maximum-lines 10000
+      eshell-history-size 10000
+      eshell-scroll-to-bottom-on-input t)
+(setq eshell-visual-commands '("less" "more" "top" "vi" "vim")
+      eshell-visual-subcommands '(("git" "diff" "log" "show")))
 
 (use-package exec-path-from-shell
   :config
