@@ -15,7 +15,7 @@
 (straight-use-package 'use-package)
 
 ;; standard
-(setq dired-listing-switches "-agho --group-directories-first")
+(setq dired-listing-switches "-agho")
 (setq inhibit-startup-message t)
 (setq visible-bell t)
 (column-number-mode)
