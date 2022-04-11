@@ -17,12 +17,11 @@
 ;; standard
 (setq dired-listing-switches "-agho")
 (setq inhibit-startup-message t)
-(setq visible-bell t)
 (column-number-mode)
 (global-display-line-numbers-mode t)
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
+(menu-bar-mode -1)
 (scroll-bar-mode -1)
-(set-face-attribute 'default nil :font "Fira Code Light" :height 100)
 (set-fringe-mode 8)
 (tool-bar-mode -1)
 (tooltip-mode -1)
