@@ -15,8 +15,11 @@
 (straight-use-package 'use-package)
 
 ;; standard
+(setq completion-styles '(flex))
 (setq dired-listing-switches "-agho")
 (setq inhibit-startup-message t)
+(setq read-buffer-completion-ignore-case t)
+(setq read-file-name-completion-ignore-case t)
 (column-number-mode)
 (global-display-line-numbers-mode t)
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
@@ -70,40 +73,19 @@
     "l" 'dired-single-buffer)
   :straight t)
 
-(use-package lsp-mode
-  :init
-  (setq lsp-headerline-breadcrumb-enable nil)
-  (setq lsp-keymap-prefix "C-c l")
-  :hook (
-	 (python-mode . lsp-deferred)
-	 (lsp-mode . lsp-enable-which-key-integration))
-  :commands
-  (lsp lsp-deferred)
+(use-package selectrum
+  :config
+  (selectrum-mode 1)
   :straight t)
 
-(use-package ivy
-  :init
-  (setq ivy-count-format "(%d/%d) ")
-  (setq ivy-re-builders-alist '((t . ivy--regex-fuzzy)))
-  (setq ivy-use-virtual-buffers t)
+(use-package company
   :config
-  (ivy-mode 1)
+  (global-company-mode)
   :straight t)
 
-(use-package counsel
+(use-package marginalia
   :config
-  (counsel-mode 1)
-  :custom
-  (counsel-rg-base-command ;; Modified from the original one to include hidden files
-   `("rg"
-     "--max-columns" "240"
-     "--with-filename"
-     "--no-heading"
-     "--line-number"
-     "--color" "never"
-     "--hidden"
-     "--glob" "!.git/*"
-     "%s"))
+  (marginalia-mode)
   :straight t)
 
 (use-package which-key
@@ -113,23 +95,11 @@
   (which-key-mode 1)
   :straight t)
 
-(use-package projectile
-  :config
-  (projectile-mode 1)
-  :custom
-  (projectile-completion-system 'ivy)
-  :straight t)
-
-(use-package counsel-projectile
-  :config
-  (counsel-projectile-mode 1)
-  :bind-keymap
-  (("C-c p" . projectile-command-map))
-  :straight t)
-
-(use-package ivy-rich
+(use-package consult
   :init
-  (ivy-rich-mode 1)
+  (setq consult-ripgrep-args "rg --color never --glob !.git/ --hidden --line-buffered --line-number --max-columns 1000 --no-heading --smart-case --null .")
+  :config
+  (defalias 'rg 'consult-ripgrep)
   :straight t)
 
 (use-package magit
@@ -142,24 +112,15 @@
   (diff-hl-margin-mode)
   :straight t)
 
-(use-package flycheck
-  :init
-  (global-flycheck-mode)
-  :straight t)
-
-(use-package company
-  :config
-  (global-company-mode)
-  :straight t)
-
-(use-package lsp-ivy
-  :commands
-  (lsp-ivy-workspace-symbol)
-  :straight t)
-
-(use-package lsp-pyright
+(use-package eglot
   :hook
-  (python-mode . (lambda () (require 'lsp-pyright) (lsp-deferred)))
+  (python-mode . eglot-ensure)
+  :straight t)
+
+(use-package format-all
+  :hook
+  (prog-mode . format-all-mode)
+  (format-all-mode . format-all-ensure-formatter)
   :straight t)
 
 (add-hook 'emacs-startup-hook
