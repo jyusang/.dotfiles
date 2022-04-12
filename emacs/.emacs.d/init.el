@@ -22,7 +22,6 @@
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
-(set-fringe-mode 8)
 (tool-bar-mode -1)
 (tooltip-mode -1)
 
