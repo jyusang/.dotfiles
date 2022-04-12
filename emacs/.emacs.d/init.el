@@ -161,3 +161,10 @@
   :hook
   (python-mode . (lambda () (require 'lsp-pyright) (lsp-deferred)))
   :straight t)
+
+(add-hook 'emacs-startup-hook
+	  (lambda ()
+	    (message "startup-time: %s"
+		     (format "%.2fs" (float-time (time-subtract
+						  after-init-time
+						  before-init-time))))))
