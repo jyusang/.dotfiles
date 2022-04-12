@@ -40,23 +40,21 @@
   (exec-path-from-shell-initialize)
   :straight t)
 
-(use-package dired-single
-  :commands
-  (dired dired-jump)
-  :straight t)
-
 (use-package no-littering
   :config
   (require 'recentf)
   (add-to-list 'recentf-exclude no-littering-var-directory)
   (add-to-list 'recentf-exclude no-littering-etc-directory)
-  (setq auto-save-file-name-transforms
-	`((".*" ,(no-littering-expand-var-file-name "auto-save/") t)))
-  (setq backup-directory-alist
-	`((".*" . ,(no-littering-expand-var-file-name "backup/"))))
+  :straight t)
+
+(use-package dired-single
+  :defer 0
+  :commands
+  (dired dired-jump)
   :straight t)
 
 (use-package evil
+  :defer 0
   :init
   (setq evil-undo-system 'undo-redo)
   (setq evil-want-C-u-scroll t)
@@ -66,6 +64,8 @@
   :straight t)
 
 (use-package evil-collection
+  :after evil
+  :defer 0
   :config
   (evil-collection-init)
   (evil-collection-define-key 'normal 'dired-mode-map
@@ -74,21 +74,25 @@
   :straight t)
 
 (use-package selectrum
+  :defer 0
   :config
   (selectrum-mode 1)
   :straight t)
 
 (use-package company
+  :defer 0
   :config
   (global-company-mode)
   :straight t)
 
 (use-package marginalia
+  :defer 0
   :config
   (marginalia-mode)
   :straight t)
 
 (use-package which-key
+  :defer 0
   :init
   (setq which-key-idle-delay 0.5)
   :config
@@ -96,6 +100,7 @@
   :straight t)
 
 (use-package consult
+  :defer 0
   :init
   (setq consult-ripgrep-args "rg --color never --glob !.git/ --hidden --line-buffered --line-number --max-columns 1000 --no-heading --smart-case --null .")
   :config
@@ -103,9 +108,11 @@
   :straight t)
 
 (use-package magit
+  :defer 0
   :straight t)
 
 (use-package diff-hl
+  :defer 0
   :config
   (global-diff-hl-mode)
   (diff-hl-flydiff-mode)
@@ -113,11 +120,13 @@
   :straight t)
 
 (use-package eglot
+  :defer 0
   :hook
   (python-mode . eglot-ensure)
   :straight t)
 
 (use-package format-all
+  :defer 0
   :hook
   (prog-mode . format-all-mode)
   (format-all-mode . format-all-ensure-formatter)
@@ -125,7 +134,7 @@
 
 (add-hook 'emacs-startup-hook
 	  (lambda ()
-	    (message "startup-time: %s"
+	    (message "Init time: %s"
 		     (format "%.2fs" (float-time (time-subtract
 						  after-init-time
 						  before-init-time))))))
