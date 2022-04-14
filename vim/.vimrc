@@ -8,7 +8,6 @@ endif
 call plug#begin()
 Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-gitgutter'
-Plug 'chriskempson/base16-vim'
 Plug 'embear/vim-localvimrc'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
@@ -22,7 +21,6 @@ set autoread
 set lazyredraw
 set mouse=a
 set updatetime=200
-set visualbell
 
 " Display
 set number
@@ -48,20 +46,11 @@ set nohlsearch
 set smartcase
 
 " Style
-let &t_8f = "\<Esc>[38:2:%lu:%lu:%lum"
-let &t_8b = "\<Esc>[48:2:%lu:%lu:%lum"
-set termguicolors
-if filereadable(expand("~/.vimrc_background"))
-  let base16colorspace=256
-  source ~/.vimrc_background
-  " Hotfix spell highlight: https://github.com/chriskempson/base16-vim/issues/182
-  call Base16hi("SpellBad",   "", "", g:base16_cterm08, g:base16_cterm00, "", "")
-  call Base16hi("SpellCap",   "", "", g:base16_cterm0A, g:base16_cterm00, "", "")
-  call Base16hi("SpellLocal", "", "", g:base16_cterm0D, g:base16_cterm00, "", "")
-  call Base16hi("SpellRare",  "", "", g:base16_cterm0B, g:base16_cterm00, "", "")
-endif
+highlight! link SignColumn LineNr
+" See airblade/vim-gitgutter#696 for above workaround
 
 " Key maps
+nnoremap gb :Git blame<CR>
 nnoremap gd :ALEGoToDefinition<CR>
 
 " ALE
