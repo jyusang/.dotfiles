@@ -88,7 +88,6 @@ in
         "helm"
         "kubectl"
         "pip"
-        "base16-shell"
       ];
     };
     shellAliases = {
