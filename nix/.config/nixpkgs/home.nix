@@ -2,7 +2,8 @@
 
 let
   me = import ./me.nix;
-in {
+in
+{
   nixpkgs.config.allowUnfree = true;
 
   # Home Manager needs a bit of information about you and the
@@ -26,12 +27,27 @@ in {
 
     # Dev tools
     black
+    clang-tools
+    elixir
+    elixir_ls
+    ghc
     gnumake
+    go
+    gopls
+    haskellPackages.brittany
+    haskellPackages.haskell-language-server
+    nixpkgs-fmt
+    nodePackages.bash-language-server
     nodePackages.prettier
     nodePackages.typescript
+    nodePackages.vscode-langservers-extracted
     pyright
+    python3Full
+    rnix-lsp
     rubocop
     rubyPackages.solargraph
+    rust-analyzer
+    rustfmt
     shfmt
 
   ];
