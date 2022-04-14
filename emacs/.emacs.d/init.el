@@ -121,8 +121,11 @@
 
 (use-package eglot
   :defer 0
+  :config
+  ;; workaround for installing elixir_ls via Nix
+  (add-to-list 'eglot-server-programs '(elixir-mode . ("elixir-ls")))
   :hook
-  (python-mode . eglot-ensure)
+  (prog-mode . eglot-ensure)
   :straight t)
 
 (use-package format-all
@@ -131,6 +134,16 @@
   (prog-mode . format-all-mode)
   (format-all-mode . format-all-ensure-formatter)
   :straight t)
+
+(use-package flycheck
+  :defer 0
+  :config
+  (flycheck-add-mode 'javascript-eslint 'web-mode)
+  (flycheck-add-mode 'typescript-tslint 'web-mode)
+  :straight t)
+
+;; major modes for various languages
+(load "~/.emacs.d/lang.el")
 
 (add-hook 'emacs-startup-hook
 	  (lambda ()
