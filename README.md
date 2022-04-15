@@ -9,7 +9,8 @@
 ### Clone this repo
 
 ```sh
-git clone git@gitlab.com:jyusang/dotfiles.git ~/.dotfiles
+cd ~
+git clone git@gitlab.com:jyusang/.dotfiles.git
 ```
 
 ### Link configuration files
