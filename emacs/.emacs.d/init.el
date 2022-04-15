@@ -79,6 +79,18 @@
   (selectrum-mode 1)
   :straight t)
 
+(use-package prescient
+  :defer 0
+  :config
+  (add-to-list 'prescient-filter-method 'fuzzy)
+  :straight t)
+
+(use-package selectrum-prescient
+  :defer 0
+  :config
+  (selectrum-prescient-mode 1)
+  :straight t)
+
 (use-package company
   :defer 0
   :config
