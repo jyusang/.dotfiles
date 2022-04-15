@@ -18,6 +18,10 @@
   :defer 0
   :straight t)
 
+(use-package markdown-mode
+  :defer 0
+  :straight t)
+
 (use-package nix-mode
   :defer 0
   :straight t)

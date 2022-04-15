@@ -132,6 +132,7 @@
   :defer 0
   :hook
   (prog-mode . format-all-mode)
+  (text-mode . format-all-mode)
   (format-all-mode . format-all-ensure-formatter)
   :straight t)
 
