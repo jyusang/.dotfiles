@@ -48,6 +48,7 @@ in
     rubyPackages.solargraph
     rust-analyzer
     rustfmt
+    sbcl
     shfmt
 
   ];
