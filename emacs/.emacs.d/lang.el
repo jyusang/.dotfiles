@@ -30,6 +30,12 @@
   :defer 0
   :straight t)
 
+(use-package slime
+  :defer 0
+  :init
+  (setq inferior-lisp-program "sbcl")
+  :straight t)
+
 (use-package tide
   :defer 0
   :hook ((js-mode . (lambda () (tide-setup)))
