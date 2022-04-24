@@ -151,6 +151,7 @@
 (use-package flycheck
   :defer 0
   :config
+  (flycheck-mode 1)
   (flycheck-add-mode 'javascript-eslint 'web-mode)
   (flycheck-add-mode 'typescript-tslint 'web-mode)
   :straight t)
