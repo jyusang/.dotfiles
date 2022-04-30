@@ -1,0 +1,26 @@
+[
+  {
+    "key": "alt+t",
+    "command": "workbench.action.createTerminalEditor"
+  },
+  {
+    "key": "alt+o",
+    "command": "workbench.action.quickOpen"
+  },
+  {
+    "key": "alt+p",
+    "command": "workbench.action.showCommands"
+  },
+  {
+    "key": "alt+b",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "alt+j",
+    "command": "workbench.action.togglePanel"
+  },
+  {
+    "key": "alt+s",
+    "command": "search.action.openNewEditor"
+  }
+]

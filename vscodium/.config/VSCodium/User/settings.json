@@ -1,0 +1,16 @@
+{
+  "breadcrumbs.enabled": false,
+  "customizeUI.activityBar": "top",
+  "customizeUI.activityBarHideSettings": true,
+  "customizeUI.stylesheet": {
+    ".tabs-and-actions-container": "display: none !important"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.minimap.enabled": false,
+  "search.searchEditor.defaultNumberOfContextLines": 0,
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.startupEditor": "none",
+  "window.titleBarStyle": "custom",
+  "window.enableMenuBarMnemonics": false
+}
