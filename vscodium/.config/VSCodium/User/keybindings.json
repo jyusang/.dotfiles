@@ -1,26 +1,94 @@
 [
   {
+    "key": "alt+x",
+    "command": "workbench.action.showCommands"
+  },
+  {
+    "key": "alt+p",
+    "command": "workbench.action.quickOpen"
+  },
+  {
     "key": "alt+t",
     "command": "workbench.action.createTerminalEditor"
   },
   {
-    "key": "alt+o",
-    "command": "workbench.action.quickOpen"
-  },
-  {
-    "key": "alt+p",
-    "command": "workbench.action.showCommands"
-  },
-  {
-    "key": "alt+b",
+    "key": "alt+b alt+b",
     "command": "workbench.action.toggleSidebarVisibility"
   },
   {
-    "key": "alt+j",
+    "key": "alt+j alt+j",
     "command": "workbench.action.togglePanel"
   },
   {
     "key": "alt+s",
     "command": "search.action.openNewEditor"
+  },
+  {
+    "key": "ctrl+b h",
+    "command": "workbench.action.focusLeftGroup"
+  },
+  {
+    "key": "ctrl+b j",
+    "command": "workbench.action.focusBelowGroup"
+  },
+  {
+    "key": "ctrl+b k",
+    "command": "workbench.action.focusAboveGroup"
+  },
+  {
+    "key": "ctrl+b l",
+    "command": "workbench.action.focusRightGroup"
+  },
+  {
+    "key": "ctrl+b ctrl+h",
+    "command": "workbench.action.splitEditorLeft"
+  },
+  {
+    "key": "ctrl+b ctrl+j",
+    "command": "workbench.action.splitEditorDown"
+  },
+  {
+    "key": "ctrl+b ctrl+k",
+    "command": "workbench.action.splitEditorUp"
+  },
+  {
+    "key": "ctrl+b ctrl+l",
+    "command": "workbench.action.splitEditorRight"
+  },
+  {
+    "key": "ctrl+b shift-h",
+    "command": "workbench.action.moveActiveEditorGroupLeft"
+  },
+  {
+    "key": "ctrl+b shift-j",
+    "command": "workbench.action.moveActiveEditorGroupDown"
+  },
+  {
+    "key": "ctrl+b shift-k",
+    "command": "workbench.action.moveActiveEditorGroupUp"
+  },
+  {
+    "key": "ctrl+b shift-l",
+    "command": "workbench.action.moveActiveEditorGroupRight"
+  },
+  {
+    "key": "ctrl+b alt-h",
+    "command": "workbench.action.newGroupLeft"
+  },
+  {
+    "key": "ctrl+b alt-j",
+    "command": "workbench.action.newGroupBelow"
+  },
+  {
+    "key": "ctrl+b alt-k",
+    "command": "workbench.action.newGroupAbove"
+  },
+  {
+    "key": "ctrl+b alt-l",
+    "command": "workbench.action.newGroupRight"
+  },
+  {
+    "key": "ctrl+b q",
+    "command": "workbench.action.closeEditorsInGroup"
   }
 ]
