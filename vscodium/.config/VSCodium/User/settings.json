@@ -2,15 +2,14 @@
   "breadcrumbs.enabled": false,
   "customizeUI.activityBar": "top",
   "customizeUI.activityBarHideSettings": true,
-  "customizeUI.stylesheet": {
-    ".tabs-and-actions-container": "display: none !important"
-  },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
   "search.searchEditor.defaultNumberOfContextLines": 0,
-  "workbench.editor.tabSizing": "shrink",
-  "workbench.startupEditor": "none",
+  "window.enableMenuBarMnemonics": false,
   "window.titleBarStyle": "custom",
-  "window.enableMenuBarMnemonics": false
+  "workbench.editor.tabCloseButton": "off",
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.iconTheme": null,
+  "workbench.startupEditor": "none"
 }
