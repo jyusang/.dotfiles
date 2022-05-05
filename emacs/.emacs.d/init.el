@@ -160,8 +160,8 @@
 (load "~/.emacs.d/lang.el")
 
 (add-hook 'emacs-startup-hook
-	  (lambda ()
-	    (message "Init time: %s"
-		     (format "%.2fs" (float-time (time-subtract
-						  after-init-time
-						  before-init-time))))))
+          (lambda ()
+            (message "Init time: %s"
+                     (format "%.2fs" (float-time (time-subtract
+                                                  after-init-time
+                                                  before-init-time))))))

@@ -39,8 +39,8 @@
 (use-package tide
   :defer 0
   :hook ((js-mode . (lambda () (tide-setup)))
-	 (typescript-mode . (lambda () (tide-setup)))
-	 (web-mode . (lambda () (tide-setup))))
+         (typescript-mode . (lambda () (tide-setup)))
+         (web-mode . (lambda () (tide-setup))))
   :straight t)
 
 (use-package web-mode
