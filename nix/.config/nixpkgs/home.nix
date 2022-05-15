@@ -30,6 +30,7 @@ in
     clang-tools
     elixir
     elixir_ls
+    gcc
     ghc
     gnumake
     go
