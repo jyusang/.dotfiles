@@ -46,6 +46,7 @@ set nohlsearch
 set smartcase
 
 " Style
+colorscheme default
 highlight! link SignColumn LineNr
 " See airblade/vim-gitgutter#696 for above workaround
 
