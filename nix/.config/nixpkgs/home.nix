@@ -77,8 +77,7 @@ in
     enable = true;
     oh-my-zsh = {
       enable = true;
-      custom = "${me.homeDirectory}/.oh-my-zsh-custom";
-      theme = "fishy_patched";
+      theme = "nicoulaj";
       plugins = [
         "asdf"
         "common-aliases"
