@@ -25,6 +25,10 @@ in
     tmux
     tree
 
+    # Editors
+    neovim
+    vim
+
     # Dev tools
     black
     clang-tools
