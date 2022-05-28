@@ -58,12 +58,6 @@ in
 
   ];
 
-  # Workaround unknown terminal 'xterm-kitty' problem, see:
-  # https://github.com/nix-community/home-manager/issues/423
-  home.sessionVariables = {
-    TERMINFO_DIRS = "${pkgs.kitty.terminfo.outPath}/share/terminfo";
-  };
-
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
   # when a new Home Manager release introduces backwards
