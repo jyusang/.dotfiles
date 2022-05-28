@@ -81,7 +81,7 @@ in
     enable = true;
     oh-my-zsh = {
       enable = true;
-      theme = "nicoulaj";
+      theme = "imajes";
       plugins = [
         "asdf"
         "common-aliases"
