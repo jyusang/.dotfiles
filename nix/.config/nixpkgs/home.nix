@@ -2,6 +2,7 @@
 
 let
   me = import ./me.nix;
+  unstable = import <unstable> { };
 in
 {
   nixpkgs.config.allowUnfree = true;
@@ -26,8 +27,9 @@ in
     tree
 
     # Editors
-    neovim
-    vim
+    unstable.emacs
+    unstable.neovim
+    unstable.vim
 
     # Dev tools
     black
@@ -55,6 +57,7 @@ in
     rustfmt
     sbcl
     shfmt
+    unstable.wasmtime
 
   ];
 
