@@ -80,16 +80,11 @@
   (selectrum-mode 1)
   :straight t)
 
-(use-package prescient
+(use-package fzf
   :defer 0
-  :config
-  (add-to-list 'prescient-filter-method 'fuzzy)
-  :straight t)
-
-(use-package selectrum-prescient
-  :defer 0
-  :config
-  (selectrum-prescient-mode 1)
+  :bind
+  (("C-x p f" . fzf-git-files)
+   ("C-x p g" . fzf-git-grep))
   :straight t)
 
 (use-package company
@@ -110,14 +105,6 @@
   (setq which-key-idle-delay 0.5)
   :config
   (which-key-mode 1)
-  :straight t)
-
-(use-package consult
-  :defer 0
-  :init
-  (setq consult-ripgrep-args "rg --color never --glob !.git/ --hidden --line-buffered --line-number --max-columns 1000 --no-heading --smart-case --null .")
-  :config
-  (defalias 'rg 'consult-ripgrep)
   :straight t)
 
 (use-package magit
