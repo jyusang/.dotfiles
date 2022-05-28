@@ -159,10 +159,6 @@
 
 ;; major modes for various languages
 (load "~/.emacs.d/lang.el")
+(load "~/.emacs.d/util.el")
 
-(add-hook 'emacs-startup-hook
-          (lambda ()
-            (message "Init time: %s"
-                     (format "%.2fs" (float-time (time-subtract
-                                                  after-init-time
-                                                  before-init-time))))))
+(add-hook 'emacs-startup-hook 'message-init-time)
