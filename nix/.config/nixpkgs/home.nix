@@ -78,7 +78,6 @@ in
     enable = true;
     oh-my-zsh = {
       enable = true;
-      theme = "imajes";
       plugins = [
         "asdf"
         "common-aliases"
@@ -95,5 +94,8 @@ in
     shellAliases = {
       l = "la";
     };
+    initExtra = ''
+      PROMPT="%# "
+    '';
   };
 }
