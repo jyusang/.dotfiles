@@ -92,7 +92,9 @@ in
       ];
     };
     shellAliases = {
-      l = "la";
+      e = "tree -a -L 1";
+      ee = "tree -a -L 2";
+      eee = "tree -a -L 3";
     };
     initExtra = ''
       PROMPT="%# "
