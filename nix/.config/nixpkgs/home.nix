@@ -97,7 +97,7 @@ in
       eee = "tree -a -L 3";
     };
     initExtra = ''
-      PROMPT="%# "
+      PROMPT="? "
     '';
   };
 }
