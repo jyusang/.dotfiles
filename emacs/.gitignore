@@ -4,3 +4,4 @@
 .emacs.d/straight/
 .emacs.d/var/
 .emacs.d/recentf
+.emacs.d/adhoc.el

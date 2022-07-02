@@ -147,5 +147,8 @@
 ;; major modes for various languages
 (load "~/.emacs.d/lang.el")
 (load "~/.emacs.d/util.el")
+(condition-case nil
+    (load "~/.emacs.d/adhoc.el")
+  (error (message "'~/.emacs.d/adhoc.el' not found, skip loading")))
 
 (add-hook 'emacs-startup-hook 'message-init-time)
