@@ -1,15 +1,4 @@
 {
-  "breadcrumbs.enabled": false,
-  "customizeUI.activityBar": "top",
-  "customizeUI.activityBarHideSettings": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
-  "search.searchEditor.defaultNumberOfContextLines": 0,
-  "window.enableMenuBarMnemonics": false,
-  "window.titleBarStyle": "custom",
-  "workbench.editor.tabCloseButton": "off",
-  "workbench.editor.tabSizing": "shrink",
-  "workbench.iconTheme": null,
-  "workbench.startupEditor": "none"
+  "workbench.editor.showTabs": false
 }
