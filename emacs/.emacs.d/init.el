@@ -130,6 +130,8 @@
 
 (use-package format-all
   :defer 0
+  :init
+  (setq format-all-formatters '(("HTML" prettier)))
   :straight t)
 
 (use-package flycheck
