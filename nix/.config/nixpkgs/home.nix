@@ -97,6 +97,7 @@ in
       jjj = "tree -ah -L 3";
     };
     initExtra = ''
+      FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
       PROMPT="? "
     '';
   };
