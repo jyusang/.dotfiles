@@ -20,6 +20,7 @@ in
     fd
     fzf
     jq
+    mosh
     qmk
     ranger
     ripgrep
@@ -30,10 +31,12 @@ in
     unstable.emacs
     unstable.neovim
     unstable.vim
+    vscodium
 
     # Dev tools
     black
     clang-tools
+    deno
     elixir
     elixir_ls
     gcc
