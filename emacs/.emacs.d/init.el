@@ -21,6 +21,7 @@
 (setq read-buffer-completion-ignore-case t)
 (setq read-file-name-completion-ignore-case t)
 (setq-default indent-tabs-mode nil)
+(setq-default truncate-lines t)
 (column-number-mode)
 (global-display-line-numbers-mode t)
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
