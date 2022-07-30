@@ -46,6 +46,7 @@ in
     gopls
     haskellPackages.brittany
     haskellPackages.haskell-language-server
+    jdk
     nixpkgs-fmt
     nodePackages.bash-language-server
     nodePackages.prettier
