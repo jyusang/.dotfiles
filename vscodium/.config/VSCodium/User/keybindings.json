@@ -12,12 +12,12 @@
     "command": "workbench.action.createTerminalEditor"
   },
   {
-    "key": "alt+b alt+b",
+    "key": "alt+b",
     "command": "workbench.action.toggleSidebarVisibility"
   },
   {
-    "key": "alt+j alt+j",
-    "command": "workbench.action.togglePanel"
+    "key": "alt+j",
+    "command": "workbench.action.toggleMaximizedPanel"
   },
   {
     "key": "alt+s",
