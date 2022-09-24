@@ -1,4 +1,4 @@
-" Plugin
+" Plugins
 let g:netrw_dirhistmax = 0
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -6,67 +6,36 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source ~/.vimrc
 endif
 call plug#begin()
-Plug 'airblade/vim-gitgutter'
-Plug 'embear/vim-localvimrc'
+Plug 'dense-analysis/ale'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
-Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
-Plug 'w0rp/ale'
+Plug 'airblade/vim-gitgutter'
+Plug 'sheerun/vim-polyglot'
 call plug#end()
 
-" Behavior
-set autoread
-set lazyredraw
-set mouse=a
-set updatetime=200
-
-" Display
-set number
-set wildmenu
-set regexpengine=2
-
-" Format
-filetype plugin indent on
-set encoding=utf-8
-syntax enable
-
-" Indentation
+" Flags
 set autoindent
 set backspace=indent,eol,start
-set expandtab
-set shiftwidth=2
-set softtabstop=2
-
-" Search
 set ignorecase
 set incsearch
-set nohlsearch
-set smartcase
+set nowrap
+set number
 
-" Style
+" Styles
 colorscheme default
-highlight! link SignColumn LineNr
-" See airblade/vim-gitgutter#696 for above workaround
-
-" Key maps
-nnoremap gb :Git blame<CR>
-nnoremap gd :ALEGoToDefinition<CR>
+highlight! link SignColumn LineNr| "See airblade/vim-gitgutter#696
 
 " Netrw
 let g:netrw_banner = 0
-
 function! NetrwMapping()
   nmap <buffer> h -^
   nmap <buffer> l <CR>
 endfunction
-
 augroup netrw_mapping
   autocmd!
   autocmd filetype netrw call NetrwMapping()
 augroup END
-
-nnoremap <C-x><C-j> :Explore<CR>
 
 " ALE
 set omnifunc=ale#completion#OmniFunc
@@ -103,3 +72,10 @@ let g:ale_linters = {
 let g:ale_linter_aliases = {
 \   'typescriptreact': 'typescript'
 \}
+
+" Keymaps
+nnoremap <leader>d :Explore<cr>
+nnoremap <leader>f :FZF<cr>
+nnoremap <leader>g :Rg<cr>
+nnoremap gb :Git blame<cr>
+nnoremap gd :ALEGoToDefinition<cr>
