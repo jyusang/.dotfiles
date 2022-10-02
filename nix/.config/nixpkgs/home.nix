@@ -61,6 +61,8 @@ in
     rustfmt
     sbcl
     shfmt
+    zig
+    zls
     unstable.wasmtime
 
   ];
