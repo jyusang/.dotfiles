@@ -13,6 +13,7 @@
 [alias]
   save = ! git add --all && git commit --message 'SAVEPOINT'
   undo = reset HEAD~1 --mixed
+  cloc = ! git grep -Il '' | xargs wc -l | sort
   bye-ls = \
     ! git branch --remotes \
     | grep origin \
