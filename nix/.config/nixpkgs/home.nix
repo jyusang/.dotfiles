@@ -21,7 +21,6 @@ in
     fzf
     jq
     mosh
-    qmk
     ranger
     ripgrep
     tmux
