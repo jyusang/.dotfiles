@@ -42,12 +42,17 @@
 
 (use-package tide
   :defer 0
+  :mode ("\\.jsx\\'"
+         "\\.tsx\\'")
   :hook ((js-mode . (lambda () (tide-setup)))
          (typescript-mode . (lambda () (tide-setup)))
          (web-mode . (lambda () (tide-setup))))
   :straight t)
 
 (use-package web-mode
-  :mode ("\\.jsx\\'"
-         "\\.tsx\\'")
+  :straight t)
+
+(use-package zig-mode
+  :defer 0
+  :mode ("\\.zig\\'")
   :straight t)
